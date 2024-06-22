@@ -1,3 +1,4 @@
+import 'package:bookly/core/DI/service_locator.dart';
 import 'package:bookly/core/util/app_router.dart';
 import 'package:bookly/features/home/domain/entities/book_entity.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ void main() async {
   Hive.registerAdapter(BookEntityAdapter());
   await Hive.openBox<BookEntity>(kFeaturedBox);
   await Hive.openBox<BookEntity>(kNewestBox);
+  setupServiceLocator();
   runApp(const BooklyApp());
 }
 
