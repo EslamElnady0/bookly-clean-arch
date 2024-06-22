@@ -28,11 +28,13 @@ abstract class AppRouter {
         builder: (context, state) => MultiBlocProvider(providers: [
           BlocProvider(
             create: (context) =>
-                FeaturedBooksCubit(getIt.get<FetchFeaturedBooksUseCase>()),
+                FeaturedBooksCubit(getIt.get<FetchFeaturedBooksUseCase>())
+                  ..fetchFeaturedBooks(),
           ),
           BlocProvider(
             create: (context) =>
-                NewestBooksCubit(getIt.get<FetchNewestBooksUseCase>()),
+                NewestBooksCubit(getIt.get<FetchNewestBooksUseCase>())
+                  ..fetchNewestBooks(),
           )
         ], child: const HomeView()),
       ),
