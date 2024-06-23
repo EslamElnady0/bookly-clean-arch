@@ -1,6 +1,5 @@
 import 'package:bookly/features/home/presentation/views/widget/book_rating.dart';
 import 'package:bookly/features/home/presentation/views/widget/books_actions.dart';
-import 'package:bookly/features/home/presentation/views/widget/custom_book_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
